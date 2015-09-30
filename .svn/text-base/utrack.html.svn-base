@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Track!</title>
+    <link rel="stylesheet" href="css/ext/bootstrap.css"/>
+    <link rel="stylesheet" href="css/utrack.css"/>
+    <link rel="shortcut icon" href="images/u.jpg" />
+</head>
+<body>
+
+<div id="app_container" class="container">
+    <div id="nav_header">
+        <h1 id="page_title">UTrack!</h1>
+        <div id="menu_options" class="btn-group" role="group" aria-label="...">
+          <button type="button" id="input_btn" class="btn btn-default">Input</button>
+          <button type="button" id="analysis_btn" class="btn btn-default">Analysis</button>
+        </div>
+        <div id="page_subtitle">Track and analyze data that matters to you.</div>
+    </div>
+    <br>
+    <div id="input_div">
+        <form>
+            <p>Select an Activity: <select id="activity_dropdown">
+                <option value="Writing Code">Writing Code</option>
+                <option value="Eating Dinner">Eating Dinner</option>
+                <option value="Playing Sports">Playing Sports</option>
+                <option value="Studying">Studying for an Exam</option>
+                <option value="Attending Lectures">Attending Lectures</option>
+                <option value="Watching TV">Watching TV</option>
+            </select></p>
+            <p>Energy Level (1 = exhausted, 5 = awake): <center><input type="range" id="energy_slider"/></center> <span id="energy_span">1</span></p>
+            <p>Stress Level (1 = stressed, 5 = relaxed): <center><input type="range" id="stress_slider"/></center> <span id="stress_span">1</span></p>
+            <p>Happiness Level (1 = depressed, 5 = happy): <center><input type="range" id="happiness_slider"/></center> <span id="happiness_span">1</span></p>
+            <p>Duration of Activity: <input id="minutes_duration" type="text"> minutes</p>
+        </form>
+        <br>
+        <p id="last_submitted"></p>
+        <button type="button" id="input_submit_btn" class="btn btn-default">Submit</button>
+        </center>
+    </div>
+
+    <div id="analysis_div">
+        <!-- Put HTML here to support users in analyzing their data -->
+        <div id="analysis_options">
+            Views: 
+            <div class="btn-group" role="group" aria-label="...">
+              <button type="button" id="table_btn" class="btn btn-default">Table of Activity Duration</button>
+              <button type="button" id="scatterplot_btn" class="btn btn-default">Scatterplot of Health Data</button>
+            </div>
+            <br>
+        </div>
+        <div id="table">
+            <center>
+            <table id="data-table">
+                <tr><td>There are no items...</td></tr>
+            </table>
+            </center>
+        </div>
+        <center>
+        <div id="scatterplot">
+            <div id="customize_options">
+                Customize:
+                <label id="energy_label"><input type="checkbox" id="energy_check"> Energy level</label>
+                <br>
+                <label id="stress_label"><input type="checkbox" id="stress_check"> Stress level</label>
+                <br>
+                <label id="happiness_label"><input type="checkbox" id="happiness_check"> Happiness level</label>
+            </div>
+            <canvas id="plot_canvas">
+
+            </canvas>
+        </div>
+        <div id="bargraph">
+            <canvas id="bargraph_canvas">
+            </canvas>
+        </div>
+    </center>
+    </div>
+
+    <div id="unit_tests">
+        <!-- Keep this here so TAs can run your unit tests -->
+        <a href="unit_tests.html">Run Unit Tests</a>
+    </div>
+
+</div>
+
+<script src="js/ext/underscore.js"></script>
+<script src="js/model.js"></script>
+<script src="js/view.js"></script>
+<script src="js/utrack.js"></script>
+</body>
+</html>

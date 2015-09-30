@@ -1,0 +1,62 @@
+/* Put any additional CSS here */
+
+body {
+	background-color: #b2cecf;
+	color: #2F4F4F;
+	font-family: 'HelveticaNeue-Light';
+}
+
+#app_container {
+	text-align: center;
+	width: 700px;
+}
+
+#nav_header {
+
+}
+
+#analysis_div {
+}
+
+#data-table {
+	width: 300px;
+}
+
+#input_div {
+}
+
+#customize_options {
+	float: left;
+}
+
+#energy_label {
+	color: green;
+}
+
+#stress_label {
+	color: blue;
+}
+
+#happiness_label {
+	color: red;
+}
+
+#page_title {
+	font-size: 70px;
+}
+
+#energy_slider {
+	width: 300px;
+}
+
+#happiness_slider {
+	width: 300px;
+}
+
+#stress_slider {
+	width: 300px;
+}
+
+#page_subtitle {
+	font-size: 20px;
+}
